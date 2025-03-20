@@ -1,0 +1,59 @@
+.impact-section {
+    width: 100%;
+    padding: 50px 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.impact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.impact-text {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+}
+
+.impact-text h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.impact-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+.impact-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.number {
+    font-size: 36px;
+    /* Yazı büyüklüğü artırıldı */
+    font-weight: bold;
+    color: #44a3b8;
+    /* Mavi renk eklendi */
+}
+
+.label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}

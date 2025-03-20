@@ -1,105 +1,93 @@
-/* Banner Genel Stili */
+/* Genel Banner Stili */
 .banner-container {
     position: relative;
     width: 100%;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #dbdbdb;
-    /* Daha koyu bir arka plan */
-}
-
-/* Duyuru kutuları */
-.banner-item {
-    flex: 1;
-    height: 300px;
-    position: relative;
-    margin: 0 10px;
-    /* Duyurular arası boşluk */
-    border-radius: 12px;
-    /* Kart kenarları yumuşatma */
+    height: 80vh;
+    /* Tam ekran */
     overflow: hidden;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-    box-shadow: 0px 8px 20px rgba(0, 162, 198, 0.3);
-    /* Hafif gölge */
+    background: black;
 }
 
-
-/* Hover ile kart efekti */
-.banner-item:hover {
-    transform: translateY(-5px);
-    /* Kart yukarı kalkıyor */
-    box-shadow: 0px 10px 30px rgba(17, 239, 247, 0.5);
-    /* Daha belirgin gölge */
-}
-
-/* Aktif olan duyuru */
-.banner-item.active {
-    flex: 3;
-    box-shadow: 0px 12px 35px rgba(62, 138, 168, 0.2);
-    /* Daha büyük olunca belirgin gölge */
-}
-
-.banner-item img {
+/* Slider Resmi */
+.banner-slide {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    /* Kartın şeklini korusun */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-/* Aktif duyuru büyüyor */
-.banner-item.active {
-    flex: 3;
-}
-
-.banner-item.active img {
+.banner-slide.active {
     opacity: 1;
 }
 
-/* Sayılar */
-.number {
+/* Koyu Overlay ve Başlık */
+.banner-overlay {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    font-size: 60px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
     font-weight: bold;
-    color: transparent;
-    -webkit-text-stroke: 2px white;
-    /* Dış çizgi */
-    transition: color 3s linear, -webkit-text-stroke 3s linear;
 }
 
-/* Dolma efekti */
-
-.number.fill {
-    color: rgb(112, 112, 112);
-    /* Dolduğunda içi beyaz olacak */
-    -webkit-text-stroke: 4px rgb(112, 112, 112);
-    /* Kenar çerçevesi kalınlaşacak */
-}
-
-/* Arkaplan dolma efekti */
-.number-bg {
+/* Noktalı Navigasyon */
+.pagination-dots {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    font-size: 60px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.2);
-    z-index: -1;
-    clip-path: inset(100% 0 0 0);
-    transition: clip-path 6s linear;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
 }
 
-.number.fill~.number-bg {
-    clip-path: inset(10 0 0 0);
-    /* Yavaşça dolan efekt */
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-/* Boşluklar */
-.banner-container .banner-item:not(:last-child) {
-    margin-right: 3px;
+.dot.active-dot {
+    background: #409cd1;
+}
+
+/* Sağ Taraf Sosyal Medya Butonları */
+.social-links {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #409cd1;
+}
+
+/* Kapatma Butonu */
+.close-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-icon:hover {
+    color: #409cd1;
 }

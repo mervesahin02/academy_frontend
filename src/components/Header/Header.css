@@ -1,17 +1,13 @@
-/* Header Genel Stil */
+/* Genel Header Stil */
 .header {
     width: 100%;
-    max-width: 1950px;
-    /* Sayfaya tam oturması için */
+    max-width: 1200px;
     margin: 0 auto;
-    /* Sayfanın ortasına hizalar */
-    background: #ada8a8;
-    /* Arka plan rengi */
-    color: white;
+    background: rgb(255, 255, 255);
+    color: black;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
-    /* Hafif oval köşeler */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0);
 }
 
 /* Üst Header */
@@ -20,14 +16,15 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background: #464444;
-    /* Koyu gri */
+    /* Daraltıldı */
+
 }
 
-/* Sol Kısım: Logo + Eğitimler */
+/* Sol Kısım */
 .left-section {
     display: flex;
     align-items: center;
+
 }
 
 @keyframes bounce {
@@ -52,9 +49,7 @@
     /* Eğitimler butonu ile arayı daralt */
 }
 
-
-
-/* Eğitimler Butonu */
+/* Eğitimler Dropdown */
 .dropdown {
     position: relative;
 }
@@ -62,28 +57,38 @@
 .dropdown-button {
     background: none;
     border: none;
-    color: rgb(255, 255, 255);
+    color: black;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.dropdown-button:hover {
+    color: #1590b3;
 }
 
 .dropdown-menu {
     position: absolute;
     top: 40px;
     left: 0;
-    background: rgba(185, 185, 185, 0.9);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 250px;
+    background: rgba(194, 194, 194, 0.2);
+    /* Şeffaf beyaz arka plan */
     backdrop-filter: blur(5px);
+    /* Cam efekti */
+    box-shadow: 1px 4px 6px rgba(95, 124, 137, 0.2);
+    /* Hafif gölge */
+    border-radius: 10px;
+    /* Kenarları yuvarla */
+    padding: 25px;
+    width: 220px;
     z-index: 100;
-    /* Menü en üstte olmalı */
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(59, 130, 155, 0.3);
+    /* Hafif beyaz çerçeve */
 }
+
 
 .banner-container {
     position: relative;
@@ -92,37 +97,43 @@
 }
 
 .category-btn {
-    background: rgb(45, 44, 44);
+    background: rgba(26, 129, 150, 0.455);
     color: white;
     border: none;
     padding: 10px;
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    border-radius: 5px;
+    border-radius: 100px;
+    margin-bottom: 5px;
+}
+
+.category-btn:last-child {
+    margin-bottom: 0;
 }
 
 .category-btn:hover {
-    scale: 1.2;
+    scale: 1;
     opacity: 1;
 }
 
 /* Arka plandaki butonları blur yapma */
 .dropdown-menu:has(.category-btn:hover) .category-btn:not(:hover) {
     scale: 0.8;
-    opacity: 0.6;
-    filter: blur(3px);
+    opacity: 0.8;
+    filter: blur(4px);
 }
 
 .dropdown-menu a {
     display: block;
-    padding: 10px;
+    padding: 5px;
     text-decoration: none;
-    color: rgb(75, 70, 70);
+    color: black;
+    font-weight: bold;
 }
 
 .dropdown-menu a:hover {
-    background: #ddd;
+    background: #f4f4f4;
 }
 
 /* Arama Çubuğu */
@@ -131,10 +142,11 @@
     align-items: center;
     background: white;
     border-radius: 30px;
-    padding: 10px 20px;
-    width: 600px;
-    /* Daha büyük arama alanı */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 8px 15px;
+    width: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+    margin-right: 0px;
 }
 
 .search-box input {
@@ -142,6 +154,14 @@
     outline: none;
     flex: 1;
     font-size: 14px;
+    padding: 5px;
+    width: 0;
+    transition: width 0.3s ease;
+
+}
+
+.search-box input:focus {
+    width: 300px;
 }
 
 .search-button {
@@ -149,62 +169,87 @@
     border: none;
     cursor: pointer;
     font-size: 16px;
-    color: #2791af;
 }
 
-/* Giriş Yap Butonu */
+/* Giriş Yap & Kaydol */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
 .login-button {
-    background: #5cbae0;
+    background: white;
+    border: 2px solid rgb(13, 132, 158);
+    color: rgb(10, 131, 153);
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background: rgb(18, 117, 142);
+    color: white;
+}
+
+.register-button {
+    background: #309cbd;
     border: none;
     color: white;
-    padding: 10px 15px;
-    border-radius: 20px;
-    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 25px;
     font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-/* Menü Bölümü */
+.register-button:hover {
+    background: #1b8099;
+}
+
+/* Alt Menü */
 .header-bottom {
-    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
-    background: #676565;
-    /* Daha açık gri */
+    background: rgb(243, 242, 242);
+    padding: 12px 0;
+    position: relative;
 }
 
-/* Menü Linkleri */
 .header-menu {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     font-size: 14px;
     list-style: none;
 }
 
 .header-menu a {
     text-decoration: none;
-    color: white;
-    font-weight: normal;
-    transition: color 0.3s ease-in-out;
-    position: relative;
-    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 14px;
     padding: 5px 0;
+    position: relative;
 }
 
-/* Alt Çizgi Efekti */
-.header-menu a::before {
+/* Mavi Hover Şeridi */
+.header-menu a::after {
     content: "";
     position: absolute;
+    left: 50%;
     bottom: -3px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: rgb(77, 199, 237);
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
+    width: 0;
+    height: 3px;
+    background: #2e88a6;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
-.header-menu a:hover::before {
-    transform: scaleX(1);
+.header-menu a:hover::after {
+    width: 100%;
 }

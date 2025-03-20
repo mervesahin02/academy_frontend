@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Banner.css";
+import { FaYoutube, FaInstagram, FaLinkedin, FaTimes } from "react-icons/fa";
 
 const announcements = [
     { id: 1, title: "Duyuru 1", image: "/images/1.jpg" },
@@ -10,35 +11,44 @@ const announcements = [
 ];
 
 const Banner = () => {
-    const [activeId, setActiveId] = useState(null);
-    const [hoveredId, setHoveredId] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
-        let timer;
-        if (hoveredId !== null) {
-            timer = setTimeout(() => {
-                setActiveId(hoveredId);
-            }, 1000); //  saniye sonra büyüt
-        }
-        return () => clearTimeout(timer);
-    }, [hoveredId]);
+        const interval = setInterval(() => {
+            setActiveIndex((prevIndex) => (prevIndex + 1) % announcements.length);
+        }, 5000); // Otomatik geçiş süresi
+        return () => clearInterval(interval);
+    }, []);
+
+    const goToSlide = (index) => {
+        setActiveIndex(index);
+    };
 
     return (
         <div className="banner-container">
-            {announcements.map((item) => (
+            {announcements.map((item, index) => (
                 <div
                     key={item.id}
-                    className={`banner-item ${activeId === item.id ? "active" : ""}`}
-                    onClick={() => setActiveId(item.id)}
-                    onMouseEnter={() => setHoveredId(item.id)}
-                    onMouseLeave={() => setHoveredId(null)}
+                    className={`banner-slide ${index === activeIndex ? "active" : ""}`}
+                    style={{ backgroundImage: `url(${item.image})` }}
                 >
-                    <span className={`number ${hoveredId === item.id ? "fill" : ""}`}>
-                        {item.id}
-                    </span>
-                    <img src={item.image} alt={item.title} />
+                    <div className="banner-overlay">
+                        <h2>{item.title}</h2>
+                    </div>
                 </div>
             ))}
+
+            {/* Noktalı Navigasyon */}
+            <div className="pagination-dots">
+                {announcements.map((_, index) => (
+                    <span
+                        key={index}
+                        className={`dot ${index === activeIndex ? "active-dot" : ""}`}
+                        onClick={() => goToSlide(index)}
+                    ></span>
+                ))}
+            </div>
+
         </div>
     );
 };

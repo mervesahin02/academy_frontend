@@ -1,0 +1,25 @@
+.social-media-container {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.social-media-container a {
+    color: rgb(255, 255, 255);
+    background: rgba(14, 14, 14, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.social-media-container a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
