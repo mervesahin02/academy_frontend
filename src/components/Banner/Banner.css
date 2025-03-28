@@ -2,7 +2,7 @@
 .banner-container {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     /* Tam ekran */
     overflow: hidden;
     background: black;
@@ -11,10 +11,14 @@
 /* Slider Resmi */
 .banner-slide {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover !important;
+    /* 📌 Görselin tam oturmasını sağla */
+    background-position: center center !important;
+    /* 📌 Orta hizalama */
+    background-repeat: no-repeat !important;
+    /* 📌 Görsel tekrarlanmasın */
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -37,38 +41,46 @@
     font-weight: bold;
 }
 
-/* Noktalı Navigasyon */
+/* Noktalı Navigasyon (Aşağıya aldık) */
 .pagination-dots {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
+    /* Daha aşağı aldık */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 8px;
+    gap: 10px;
 }
 
+/* Normal Dot (Pasif Nokta) */
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 9px;
+    height: 9px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Aktif Dot (Seçili Nokta) */
 .dot.active-dot {
+    width: 11px;
+    height: 11px;
     background: #409cd1;
+    box-shadow: 0 0 10px rgba(64, 156, 209, 0.8);
+    transform: scale(1.2);
 }
 
 /* Sağ Taraf Sosyal Medya Butonları */
 .social-links {
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 10px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .social-links a {
@@ -90,4 +102,10 @@
 
 .close-icon:hover {
     color: #409cd1;
+}
+
+.banner-container {
+    cursor: grab;
+    user-select: none;
+    /* metin seçimi engellenir */
 }

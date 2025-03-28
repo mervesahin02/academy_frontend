@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "./SocialMediaIcons.css";
 import { FaYoutube, FaLinkedin, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
@@ -14,3 +14,4 @@ const SocialMediaIcons = () => {
 };
 
 export default SocialMediaIcons;
+*/

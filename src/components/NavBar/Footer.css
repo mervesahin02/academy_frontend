@@ -1,59 +1,100 @@
 .footer {
-    background-color: #d1d2d3;
-    padding: 40px 0;
-    text-align: center;
+    background-color: #fff;
+    padding: 60px 10px !important;
+    border-top: 1px solid #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.footer-section {
-    text-align: left;
+.footer-columns {
+    display: flex;
+    gap: 80px;
+    /* ☕️ BAŞLIKLAR ARASI BOŞLUK ARTIRILDI */
+    flex-wrap: wrap;
 }
 
 .footer-section h4 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    color: #272728;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    color: #000;
 }
 
 .footer-section ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.footer-section ul li {
+.footer-section li {
     margin-bottom: 8px;
 }
 
-.footer-section ul li a {
+.footer-section a {
     text-decoration: none;
-    color: #1d2023;
+    color: #333;
     font-size: 14px;
+    transition: color 0.2s;
 }
 
-.footer-section ul li a:hover {
-    color: #1294bc;
+.footer-section a:hover {
+    color: #329cb2;
+}
+
+/* 🔵 LOGO KUTUSU */
+.footer-right {
+    padding: 10px 50px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40px;
+    padding: 60px;
+
+}
+
+/* LOGO */
+.footer-logo {
+    width: 210px;
+    height: auto;
+}
+
+/* 🔴 BUTONLAR */
+.footer-apps {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-apps img {
+    width: 90px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.footer-apps img:hover {
+    transform: scale(1.05);
 }
 
 .footer-social {
     display: flex;
+    gap: 20px;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
 }
 
-.social-icon {
-    font-size: 20px;
-    color: #3d81bd;
-    transition: color 0.3s;
+.footer-social a {
+    color: #333;
+    transition: color 0.3s ease;
 }
 
-.social-icon:hover {
-    color: #007bff;
+.footer-social a:hover {
+    color: #329cb2;
 }

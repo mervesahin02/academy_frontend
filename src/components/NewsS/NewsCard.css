@@ -1,0 +1,73 @@
+.news-section-card {
+    width: 320px !important;
+    height: 280px !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    background: white;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-section-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-section-card-image {
+    width: 100%;
+    height: 140px !important;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.news-section-card-content {
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    /* Kart boyu kadar dikey alan kaplasın */
+}
+
+.news-section-card-title {
+    font-size: 14px !important;
+    font-weight: 600;
+    color: #2c3e50;
+    line-height: 1.4 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Daha az satır, daha şık görünüm */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+}
+
+.news-section-card-date {
+    color: #888;
+    font-size: 13px;
+    margin-top: 6px;
+    margin-bottom: 0;
+    /* Alt boşluk kaldırıldı */
+}
+
+.news-section-card-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #666 !important;
+    margin-top: auto;
+    /* 🟤 En alta iter */
+    padding-top: 10px;
+    /* Üstten biraz boşluk */
+}
+
+.news-section-card-stats .icon {
+    margin-right: 4px;
+    vertical-align: middle;
+    color: #666 !important;
+}

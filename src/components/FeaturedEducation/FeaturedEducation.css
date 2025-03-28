@@ -1,0 +1,52 @@
+.featured-section {
+    padding: 50px 0;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.featured-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.featured-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+}
+
+.featured-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.featured-buttons button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    color: #55b4ca;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.featured-cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.featured-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.featured-card {
+    flex: 0 0 auto;
+}

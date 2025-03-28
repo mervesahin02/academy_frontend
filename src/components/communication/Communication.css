@@ -1,0 +1,40 @@
+.communication-section {
+    background-color: #329cb2;
+    /* örnek pembe/kırmızı ton */
+    padding: 20px 0;
+    color: rgb(252, 252, 252);
+}
+
+.communication-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.communication-text h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: bold !important;
+}
+
+.communication-text p {
+    font-size: 14px;
+}
+
+.communication-button {
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.communication-button:hover {
+    background-color: #f0f0f0;
+}

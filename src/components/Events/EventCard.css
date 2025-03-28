@@ -1,0 +1,125 @@
+.event-card-horizontal {
+    width: 100%;
+    max-width: 600px !important;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    overflow: hidden;
+    padding: 16px;
+    box-sizing: border-box;
+    margin: 12px auto;
+}
+
+.event-img-box {
+    flex: 0 0 130px;
+    height: 100px;
+    margin-right: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.event-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.event-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event-top {
+    margin-bottom: 8px;
+}
+
+.event-location {
+    color: #0077cc;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.event-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 4px 0;
+}
+
+.event-info p {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #444;
+    margin: 2px 0;
+}
+
+.icon {
+    margin-right: 6px;
+    color: #0077cc;
+}
+
+.event-deadline {
+    font-size: 14px;
+    color: #333;
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+.event-actions-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.details-button {
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+}
+
+.apply-button {
+    background-color: #12b76a;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #0e9c59;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.deadline-info,
+.code-info {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin: 4px 0;
+}
+
+.code-info .icon {
+    margin-right: 6px;
+    color: #0077cc;
+}

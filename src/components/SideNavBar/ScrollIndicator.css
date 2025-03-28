@@ -1,22 +1,106 @@
-/* Sol Kenara Alınmış Scroll Şeridi */
 .scroll-indicator {
     position: fixed;
     top: 50%;
     left: 20px;
-    /* Sağdan değil, SOL kenara alındı */
     transform: translateY(-50%);
-    width: 4px;
-    height: 30%;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     z-index: 9999;
+
 }
 
-/* Şeridin Dolan Kısmı */
+.theme-toggle {
+    width: 40px;
+    height: 60px;
+    background: #e0e0e06f;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+/* Seçilen ikonun arkasındaki beyaz daire */
+.toggle-circle {
+    width: 34px;
+    height: 34px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.toggle-circle.top {
+    top: 3px !important;
+    /* 🌙 Ay seçili */
+}
+
+.toggle-circle.bottom {
+    bottom: 3px;
+    /* ☀️ Güneş seçili */
+}
+
+/* Tüm ikonlar */
+.toggle-icon {
+    font-size: 18px;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* SEÇİLİ olan ikon */
+.toggle-icon.active {
+    color: #4dbcd2;
+    /* 🔵 Mavi */
+}
+
+/* SEÇİLİ OLMAYAN ikon */
+.toggle-icon.inactive {
+    color: #999;
+    /* ⚪ Gri */
+}
+
+/* Dikey Scroll Text */
+.scroll-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 14px;
+    color: #4dbcd2;
+    font-weight: bold;
+    cursor: pointer;
+    /* 👈 El imleci */
+    transition: color 0.2s ease;
+}
+
+.scroll-text:hover {
+    color: #666666;
+    /* Hover rengi */
+}
+
+
+.scroll-track {
+    width: 3px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
 .scroll-bar {
+    position: absolute;
+    top: 0;
+    /* ✅ artık yukarıdan başlasın */
+    left: 0;
     width: 100%;
+    background: #4dbcd2;
     height: 0%;
-    background: #53d6e4;
     transition: height 0.2s ease-in-out;
 }

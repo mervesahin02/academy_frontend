@@ -1,0 +1,52 @@
+.newedu-news-section {
+    padding: 50px 0;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.newedu-news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.newedu-news-section-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+}
+
+.newedu-news-pagination-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.newedu-news-pagination-buttons button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    color: #55b4ca;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.newedu-news-cards-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.newedu-news-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.newedu-news-card {
+    flex: 0 0 auto;
+}

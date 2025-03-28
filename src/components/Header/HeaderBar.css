@@ -1,0 +1,55 @@
+.header-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* DİKEY ORTALAMA İÇİN EKLENDİ */
+    padding: 0;
+    /* Fazlalık varsa kaldır */
+    height: 35px;
+    /* İstediğin yüksekliği sabitleyebilirsin */
+    position: relative;
+    margin-top: 2px;
+    height: 50px;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center !important;
+    /* DİKEY ORTALAMA */
+    gap: 30px;
+}
+
+.header-menu a {
+    display: flex !important;
+    /* Eklendi */
+    align-items: center;
+    /* Dikey ortalama için */
+    text-decoration: none;
+    color: #2a2525;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 0;
+    line-height: 1.4;
+    position: relative;
+}
+
+.header-menu a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background: #329cb2;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.header-menu a:hover::after {
+    width: 100%;
+}
+
+/* Sayfa İçeriği için Boşluk */
+.page-content {
+    margin-top: 100px;
+}

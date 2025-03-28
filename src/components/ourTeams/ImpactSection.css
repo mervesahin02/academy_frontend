@@ -1,7 +1,7 @@
 .impact-section {
     width: 100%;
-    padding: 50px 0;
-    background: #ffffff;
+    padding: 60px 0;
+    /*background: #ffffff;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,31 +12,32 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1000px;
     width: 100%;
-    padding: 20px;
+    padding: 16px;
 }
 
 .impact-text {
     flex: 1;
     text-align: left;
-    max-width: 600px;
+    max-width: 490px;
 }
 
 .impact-text h2 {
-    font-size: 32px;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .impact-text p {
-    font-size: 16px;
+    font-size: 15px;
     color: #555;
 }
 
+/* Sayılar animasyonlu büyüyor */
 .impact-stats {
     display: flex;
-    gap: 40px;
+    gap: 70px;
 }
 
 .stat {
@@ -44,16 +45,21 @@
 }
 
 .number {
-    font-size: 36px;
-    /* Yazı büyüklüğü artırıldı */
+    font-size: 22px;
     font-weight: bold;
     color: #44a3b8;
-    /* Mavi renk eklendi */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover efekti ile büyüme */
+.stat:hover .number {
+    transform: scale(1.1);
+    color: #3182a6;
 }
 
 .label {
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     color: #666;
     margin-top: 5px;
 }

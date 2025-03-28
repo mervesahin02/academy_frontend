@@ -1,0 +1,190 @@
+/* Kart yapısı */
+.newedu-news-card {
+    width: 233px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Hover büyütme */
+.newedu-news-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Sadece özet olan kartlara uygula */
+.newedu-education-card:hover .newedu-news-card-content,
+.newedu-education-card:hover .newedu-info-box,
+.newedu-education-card:hover .newedu-level-badge,
+.newedu-education-card:hover .newedu-rating,
+.newedu-education-card:hover .newedu-instructor,
+.newedu-education-card:hover .newedu-news-card-title,
+.newedu-education-card:hover .newedu-image-box img {
+    filter: blur(3px);
+    transition: filter 0.3s ease;
+}
+
+/* Görsel kutusu */
+.newedu-image-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.newedu-news-card-image {
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    transition: filter 0.4s ease-in-out;
+}
+
+/* Eğitim özeti tüm kartı kaplasın */
+.newedu-summary-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: #d0d0d0d7;
+    color: #333;
+    z-index: 10;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 0.4s ease-in-out;
+    border-radius: 16px;
+}
+
+.newedu-news-card:hover .newedu-summary-overlay {
+    opacity: 1;
+}
+
+.newedu-summary-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 200px;
+}
+
+.newedu-summary-content h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    color: #222;
+}
+
+.newedu-summary-text {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #555;
+    margin: 0;
+}
+
+.newedu-summary-instructor {
+    font-size: 13px;
+    color: #777;
+    margin: 0;
+}
+
+/* Seviye etiketi */
+.newedu-level-badge {
+    margin-top: 2px;
+    margin-left: 0;
+    width: fit-content;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 0;
+    color: #fff;
+}
+
+.newedu-level-basic {
+    background-color: #1d9c5a;
+}
+
+.newedu-level-intermediate {
+    background-color: #f5921e;
+}
+
+.newedu-level-advanced {
+    background-color: #9c2d2d;
+}
+
+.newedu-level-general {
+    background-color: #1e88e5;
+}
+
+.newedu-news-card-content {
+    padding: 10px 14px 0 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.newedu-rating {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #444;
+    gap: 4px;
+    margin-top: 1px;
+    /* Seviye etiketi ile arası */
+    margin-bottom: 1px;
+    /* Başlık ile arası */
+}
+
+.newedu-star-list {
+    display: flex;
+    gap: 2px;
+}
+
+.newedu-star-icon {
+    color: #f7b500;
+    font-size: 15px;
+}
+
+.newedu-reviews {
+    color: #888;
+    margin-left: 2px;
+    font-size: 13px;
+}
+
+.newedu-news-card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 2px;
+}
+
+.newedu-instructor {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+/* Gri kutu */
+.newedu-info-box {
+    background-color: #f2f2f2;
+    padding: 10px 14px;
+    border-radius: 0 0 16px 16px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.newedu-info-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}

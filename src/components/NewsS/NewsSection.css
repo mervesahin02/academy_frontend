@@ -1,0 +1,59 @@
+.news-section {
+    padding: 50px 0;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.news-section-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+}
+
+.news-pagination-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.news-pagination-buttons button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    color: #55b4ca;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/*.news-pagination-buttons button:hover {
+    background-color: #b7b7b8;
+}*/
+
+.news-cards-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    width: 100%;
+    /* kritik ekleme: genişliği %100 yap */
+    box-sizing: border-box;
+    /* genişlik aşımı önlemek için */
+}
+
+/* Scrollbar gizle */
+.news-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.news-card {
+    flex: 0 0 auto;
+}

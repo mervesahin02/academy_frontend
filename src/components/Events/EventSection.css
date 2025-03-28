@@ -1,0 +1,58 @@
+/* events/EventSection.css */
+
+.event-section {
+    padding: 50px 0;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.event-section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.event-pagination-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.event-pagination-buttons button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    color: #55b4ca;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/*.event-pagination-buttons button:hover {
+    background-color: #ccc;
+}*/
+
+.event-cards-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.event-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.event-card-wrapper {
+    flex: 0 0 auto;
+}
