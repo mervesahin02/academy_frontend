@@ -1,5 +1,5 @@
 .news-section-card {
-    width: 320px !important;
+    width: 310px !important;
     height: 280px !important;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -12,9 +12,6 @@
     flex-direction: column;
 }
 
-.news-section-card:hover {
-    transform: translateY(-5px);
-}
 
 .news-section-card-image {
     width: 100%;

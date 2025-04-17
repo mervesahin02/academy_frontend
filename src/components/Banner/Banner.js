@@ -1,89 +1,79 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./Banner.css";
+import React, { useState, useEffect, useRef } from 'react';
+import './Banner.css';
 
-const announcements = [
-    { id: 1, image: "https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/04e7ede2-de3f-480a-8a3b-a19b6c189171/Banner%403x.png?t=1741941526186" },
-    { id: 2, image: "https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/f3513a19-5a0f-454d-bcc6-3c14d81deae9/Banner%403x.png?t=1741869238076" },
-    { id: 3, image: "https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/0efbce89-ae36-4f4e-be58-8bcecbcdc01a/s.s.s.png?t=1741086386055" },
-    { id: 4, image: "https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/7e366946-0493-4feb-92e1-8b657c323aa1/etkinlik1.png?t=1722934404102" },
-    { id: 5, image: "https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/1e694345-2df1-4851-8726-c8a1cc48fb8c/26Aralık-2MilyonBanner.png?t=1735221987116" },
+const banners = [
+    'https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/2572f220-d535-4af7-9288-6e250cbade90/Banner%401.5x.png?t=1743075398023',
+    'https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/4bcf9bc7-05ec-4664-abf2-7924e2471dcc/mobiluygulama-banner.png?t=1722860311607',
+    'https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/459c71d5-38a1-4038-9d5f-3a8939c19e47/Banner%403x%2810%29.png?t=1740991951955',
+    'https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/4ca70aac-f3c3-4afa-a640-bb8b2c95f8a0/sosyalmedyabanner.jpeg?t=1702648016506'
 ];
 
-const Banner = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [isDragging, setIsDragging] = useState(false);
-    const [startX, setStartX] = useState(null);
+function Banner() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [progressKey, setProgressKey] = useState(0);
+    const startX = useRef(null);
+    const isDragging = useRef(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setActiveIndex((prev) => (prev + 1) % announcements.length);
-        }, 5000);
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
+            setProgressKey((prevKey) => prevKey + 1);
+        }, 7000);
         return () => clearInterval(interval);
     }, []);
 
-    const goToSlide = (index) => {
-        const validIndex = (index + announcements.length) % announcements.length;
-        setActiveIndex(validIndex);
+    const goToPrevious = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? banners.length - 1 : prevIndex - 1
+        );
+        setProgressKey((prev) => prev + 1);
+    };
+
+    const goToNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
+        setProgressKey((prev) => prev + 1);
     };
 
     const handleMouseDown = (e) => {
-        setIsDragging(true);
-        setStartX(e.clientX);
+        isDragging.current = true;
+        startX.current = e.clientX;
     };
 
-    const handleMouseMove = (e) => {
-        if (!isDragging || startX === null) return;
+    const handleMouseUp = (e) => {
+        if (!isDragging.current) return;
+        const diff = e.clientX - startX.current;
 
-        const distance = e.clientX - startX;
+        if (diff > 50) goToPrevious(); // sola çektiyse
+        else if (diff < -50) goToNext(); // sağa çektiyse
 
-        if (distance > 100) {
-            goToSlide(activeIndex - 1);
-            setIsDragging(false);
-            setStartX(null);
-        } else if (distance < -100) {
-            goToSlide(activeIndex + 1);
-            setIsDragging(false);
-            setStartX(null);
-        }
-    };
-
-    const handleMouseUp = () => {
-        setIsDragging(false);
-        setStartX(null);
+        isDragging.current = false;
     };
 
     const handleMouseLeave = () => {
-        setIsDragging(false);
-        setStartX(null);
+        isDragging.current = false;
     };
 
     return (
         <div
-            className="banner-container"
+            className="banner-area"
             onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseLeave}
         >
-            {announcements.map((item, index) => (
-                <div
-                    key={item.id}
-                    className={`banner-slide ${index === activeIndex ? "active" : ""}`}
-                    style={{ backgroundImage: `url(${item.image})` }}
+            <div className="banner-content">
+                <img
+                    src={banners[currentIndex]}
+                    alt={`Banner ${currentIndex + 1}`}
+                    className="banner-image"
+                    draggable="false"
                 />
-            ))}
+            </div>
 
-            <div className="pagination-dots">
-                {announcements.map((_, index) => (
-                    <span
-                        key={index}
-                        className={`dot ${index === activeIndex ? "active-dot" : ""}`}
-                        onClick={() => goToSlide(index)}
-                    ></span>
-                ))}
+            <div key={progressKey} className="progress-wrapper">
+                <div className="progress-bar"></div>
             </div>
         </div>
     );
-};
+}
 
 export default Banner;

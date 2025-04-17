@@ -1,4 +1,4 @@
-.scroll-indicator {
+.scroll-indicator.full {
     position: fixed;
     top: 50%;
     left: 20px;
@@ -6,15 +6,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
+.scroll-indicator.full.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-60%);
+}
+
+.scroll-indicator.full.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%);
 }
 
 .theme-toggle {
-    width: 40px;
-    height: 60px;
-    background: #e0e0e06f;
+    width: 38px;
+    height: 68px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
     position: relative;
     cursor: pointer;
@@ -22,73 +36,85 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 0;
+    padding: 6px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
 }
 
-/* Seçilen ikonun arkasındaki beyaz daire */
+body.dark-theme .theme-toggle {
+    background: rgba(40, 40, 40, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
+}
+
 .toggle-circle {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     background: white;
     border-radius: 50%;
     position: absolute;
-    right: 2px;
-    left: 2px;
-    transition: all 0.3s ease;
+    left: 4px;
+    right: 4px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
+        0 0 8px rgba(154, 154, 154, 0.3);
+    /* tatlı mavi glow */
     z-index: 1;
 }
 
 .toggle-circle.top {
-    top: 3px !important;
-    /* 🌙 Ay seçili */
+    top: 4px;
 }
 
 .toggle-circle.bottom {
-    bottom: 3px;
-    /* ☀️ Güneş seçili */
+    bottom: 4px;
 }
 
-/* Tüm ikonlar */
-.toggle-icon {
-    font-size: 18px;
+.toggle-icon-wrapper {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
-    transition: color 0.3s ease;
 }
 
-/* SEÇİLİ olan ikon */
+.toggle-icon {
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
 .toggle-icon.active {
-    color: #4dbcd2;
-    /* 🔵 Mavi */
+    color: #313131a7;
+    transform: scale(1.1);
 }
 
-/* SEÇİLİ OLMAYAN ikon */
 .toggle-icon.inactive {
-    color: #999;
-    /* ⚪ Gri */
+    color: #aaa;
+    opacity: 0.6;
 }
 
-/* Dikey Scroll Text */
+
+/* Başa dön yazısı */
 .scroll-text {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-size: 14px;
-    color: #4dbcd2;
+    font-size: 12px;
+    color: #000000a7;
     font-weight: bold;
     cursor: pointer;
-    /* 👈 El imleci */
     transition: color 0.2s ease;
 }
 
 .scroll-text:hover {
-    color: #666666;
-    /* Hover rengi */
+    color: #3cb6c2;
 }
 
-
+/* Scroll çizgisi */
 .scroll-track {
-    width: 3px;
-    height: 150px;
-    background: rgba(0, 0, 0, 0.1);
+    width: 2px;
+    height: 100px;
+    background: #ddd;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -97,10 +123,9 @@
 .scroll-bar {
     position: absolute;
     top: 0;
-    /* ✅ artık yukarıdan başlasın */
     left: 0;
     width: 100%;
-    background: #4dbcd2;
+    background: #000000a7;
     height: 0%;
-    transition: height 0.2s ease-in-out;
+    transition: height 0.25s ease-in-out;
 }

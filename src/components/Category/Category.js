@@ -11,11 +11,12 @@ const categories = [
     { title: "Yapay Zeka Dünyası", icon: "/images/YZDünyasi.png" },
 
     // Yeni eklenenler 👇
-    { title: "Güvenli İnternet", icon: "/images/YazilimDünyasi.png" },
-    { title: "Regülasyon Dünyası", icon: "/images/SistemDünyasi.png" },
-    { title: "Temel Bilimler", icon: "/images/İşletmeDünyasi.png" },
-    { title: "Kariyer Yolu", icon: "/images/K12Dünyasi.png" },
-    { title: "Kurum ve Kuruluşlar", icon: "/images/YZDünyasi.png" }
+    { title: "Güvenli İnternet", icon: "/images/4.1.png" },
+    { title: "Regülasyon Dünyası", icon: "/images/3.1.png" },
+    { title: "Temel Bilimler", icon: "/images/2.1.png" },
+    { title: "Kariyer Yolu", icon: "/images/destek.png" },
+    { title: "Kurum ve Kuruluşlar", icon: "/images/1.1.png" }
+
 ];
 
 const Category = () => {
@@ -24,7 +25,8 @@ const Category = () => {
     return (
         <div className="category-section">
             <div className="category-wrapper">
-                <h2 className="category-title">Tüm Eğitim Kategorileri</h2>
+                <h2 className="category-title">Kategoriler</h2>
+
                 <div className="category-container">
                     {categories.map((cat, index) => (
                         <div

@@ -47,12 +47,7 @@ const Footer = () => {
                         <a href="#"><img src="https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/78e5e9d0-8ff6-4cc2-ac6f-64bfda53156b/Appstore%404x.png?t=1739346154118" alt="App Store" /></a>
                         <a href="#"><img src="https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/23cd79b1-63fc-48c3-a2e7-0f01a0e4761c/playstore%404x.png?t=1739346154119" alt="Play Store" /></a>
                     </div>
-                </div>
-                <div className="footer-social">
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube size={20} /></a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin size={20} /></a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} /></a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaXTwitter size={20} /></a>
+
                 </div>
             </div>
 

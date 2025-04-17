@@ -1,5 +1,5 @@
 .featured-card {
-    width: 233px;
+    width: 245px;
     border-radius: 16px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     overflow: hidden;
@@ -9,10 +9,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-}
-
-.featured-card:hover {
-    transform: translateY(-5px);
 }
 
 .featured-card:hover .featured-content,

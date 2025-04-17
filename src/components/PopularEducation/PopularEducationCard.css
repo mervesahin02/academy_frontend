@@ -1,6 +1,6 @@
 /* Kart yapısı */
 .popular-card {
-    width: 232px;
+    width: 245px;
     border-radius: 16px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     overflow: hidden;
@@ -12,10 +12,6 @@
     position: relative;
 }
 
-/* Hover büyütme */
-.popular-card:hover {
-    transform: translateY(-5px);
-}
 
 /* Sadece özet olan kartlara uygula */
 .popular-card:hover .popular-content,

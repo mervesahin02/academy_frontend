@@ -1,40 +1,74 @@
-.communication-section {
-    background-color: #329cb2;
-    /* örnek pembe/kırmızı ton */
-    padding: 20px 0;
-    color: rgb(252, 252, 252);
+.communication {
+    width: 100%;
+    /*background-color: #fff;*/
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
 }
 
-.communication-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1000px;
+.container {
+    max-width: 1300px;
     margin: 0 auto;
 }
 
-.communication-text h3 {
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #999;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 30px;
+    width: 300px;
+    height: 200px;
+    padding: 40px 20px;
+    box-shadow: 0 0 0 1px #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.com-icon {
+    font-size: 50px;
+    color: #2ba3b3;
+}
+
+.label {
     font-size: 18px;
-    margin-bottom: 8px;
-    font-weight: bold !important;
+    font-weight: 700;
+    color: #555;
+    margin: 20px 0 10px;
 }
 
-.communication-text p {
-    font-size: 14px;
-}
-
-.communication-button {
-    background-color: white;
-    color: #333;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 10px 25px;
-    border-radius: 25px;
+.card hr {
+    width: 80%;
     border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-top: 1px solid #f0f0f0;
 }
 
-.communication-button:hover {
-    background-color: #f0f0f0;
+.description {
+    font-size: 13px;
+    color: #ccc;
+    margin-top: 10px;
+    text-align: center;
 }

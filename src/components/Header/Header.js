@@ -151,8 +151,7 @@ const Header = () => {
                             </button>
                         </div>
 
-                        <button className="login-button">E-Devlet Girişi</button>
-                        <button className="register-button">EBA Girişi</button>
+                        <button className="login-button">Giriş Yap</button>
                     </div>
                 </div>
 

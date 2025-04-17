@@ -1,13 +1,13 @@
 .footer {
     background-color: #fff;
-    padding: 60px 10px !important;
+    padding: 60px 20px !important;
     border-top: 1px solid #e0e0e0;
     font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-container {
-    width: 80%;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -16,7 +16,7 @@
 
 .footer-columns {
     display: flex;
-    gap: 80px;
+    gap: 150px;
     /* ☕️ BAŞLIKLAR ARASI BOŞLUK ARTIRILDI */
     flex-wrap: wrap;
 }
@@ -24,7 +24,7 @@
 .footer-section h4 {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
     color: #000;
 }
 
@@ -62,7 +62,7 @@
 
 /* LOGO */
 .footer-logo {
-    width: 210px;
+    width: 190px;
     height: auto;
 }
 
@@ -73,21 +73,18 @@
 }
 
 .footer-apps img {
-    width: 90px;
+    width: 80px;
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
 
-.footer-apps img:hover {
-    transform: scale(1.05);
-}
-
 .footer-social {
     display: flex;
-    gap: 20px;
+    gap: 33px;
     justify-content: flex-end;
     align-items: center;
+    padding: 0px 10px !important;
 }
 
 .footer-social a {
@@ -96,5 +93,5 @@
 }
 
 .footer-social a:hover {
-    color: #329cb2;
+    color: #5e5d5d;
 }

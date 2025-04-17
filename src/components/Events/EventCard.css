@@ -1,53 +1,64 @@
 .event-card-horizontal {
     width: 100%;
-    max-width: 600px !important;
+    max-width: 420px !important;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     display: flex;
+    flex-direction: column;
     overflow: hidden;
     padding: 16px;
     box-sizing: border-box;
     margin: 12px auto;
 }
 
-.event-img-box {
-    flex: 0 0 130px;
-    height: 100px;
-    margin-right: 16px;
+.event-top-section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.event-image-box {
+    width: 120px;
+    height: 90px;
     border-radius: 8px;
     overflow: hidden;
+    margin-right: 12px;
+    flex-shrink: 0;
 }
 
 .event-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
 }
 
-.event-content {
-    flex: 1;
+.event-header-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex: 1;
 }
 
-.event-top {
-    margin-bottom: 8px;
-}
-
-.event-location {
+.event-location-box {
     color: #0077cc;
     font-weight: bold;
     font-size: 14px;
+    margin-bottom: 4px;
 }
 
-.event-title {
-    font-size: 15px;
+.event-title-box {
+    font-size: 16px;
     font-weight: 600;
     color: #2c3e50;
-    margin: 4px 0;
+    line-height: 1.4;
+}
+
+.event-info-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .event-info p {
@@ -66,7 +77,7 @@
 .event-deadline {
     font-size: 14px;
     color: #333;
-    margin-top: 4px;
+    margin-top: 8px;
     line-height: 1.5;
 }
 
@@ -74,7 +85,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .details-button {
@@ -104,22 +115,7 @@
     background-color: #0e9c59;
 }
 
-.event-details {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-}
-
-.deadline-info,
-.code-info {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    color: #333;
-    margin: 4px 0;
-}
-
-.code-info .icon {
+.location-icon {
     margin-right: 6px;
     color: #0077cc;
 }

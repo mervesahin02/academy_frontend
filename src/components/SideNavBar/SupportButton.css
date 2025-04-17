@@ -18,3 +18,125 @@
 .support-button:hover img {
     transform: scale(1.1);
 }
+
+.chat-popup {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    width: 320px;
+    height: 450px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #181818;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-close {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.chat-body {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.chat-input {
+    width: 92%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 14px;
+}
+
+.faq-section {
+    margin-top: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.faq-section h4 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #989898;
+}
+
+.faq-section ul {
+    padding-left: 16px;
+}
+
+.faq-section li {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.chat-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.chat-message {
+    padding: 8px 12px;
+    margin: 4px 0;
+    border-radius: 18px;
+    max-width: 75%;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.chat-message.bot {
+    background-color: #e4e4e4b0;
+    align-self: flex-start;
+}
+
+.chat-message.user {
+    background-color: #18b3d23e;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.chat-body {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.chat-send {
+    margin-top: 6px;
+    width: 100%;
+    padding: 8px;
+    background-color: #00000066;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

@@ -1,65 +1,70 @@
-.category-section {
-    width: 100%;
+.category-container {
     display: flex;
     justify-content: center;
-    padding: 30px 0;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1310px;
+    margin: 0 auto;
+    /* Ortalar */
+}
 
+
+.category-section {
+    text-align: center;
+    padding: 60px 10px;
 }
 
 .category-wrapper {
-    max-width: 1000px;
-    width: 100%;
+    max-width: 1310px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .category-title {
     font-size: 20px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 20px;
+    color: #222;
+    margin-bottom: 30px;
+    text-align: left;
+    /* sola hizalı */
 }
 
 .category-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: flex-start;
-    /* sola yasla */
     justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* Kategori kartı stili */
 .category-card {
-    background-color: #e6f2f5;
-    border: 1px solid #329cb2;
-    border-radius: 25px;
-    padding: 8px 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
     cursor: pointer;
-    transition: all 0.3s ease;
+    width: 150px;
 }
 
 .category-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
 
-    background-color: #329cb2;
-    transform: translateY(-2px);
+.category-card.blurred {
+    filter: blur(4px);
+    opacity: 0.6;
 }
 
 .category-icon {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
 .category-name {
     font-size: 14px;
-    color: #474646;
-    font-weight: 500;
-    white-space: nowrap;
-}
-
-.blurred {
-    opacity: 0.5;
-    filter: blur(0.5px);
+    color: #333;
 }

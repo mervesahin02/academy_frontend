@@ -44,9 +44,8 @@ const NewEducationCard = ({ image, title, instructor, level, levelClass, student
             </div>
             <div className="newedu-summary-overlay">
                 <div className="newedu-summary-content">
-                    <h3>{title}</h3>
+                    <img src="/images/sertifika.png" alt="Sertifika" className="newedu-certificate-image" />
                     <p className="newedu-summary-text">{summaries[title]}</p>
-                    <p className="newedu-summary-instructor">{instructor}</p>
                 </div>
             </div>
         </div>

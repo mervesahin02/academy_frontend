@@ -35,21 +35,20 @@ function App() {
             <Header />
             <HeaderBar />
             <Banner />
-            <Category />
+            <ImpactSection />
 
+            <CareerGuide />
+            <Category />
             <NewEducation />
             <PopularEducation />
             <FeaturedEducation />
 
+
             <Events />
-            <ImpactSection />
-            <CareerGuide />
-
             <NewsSection />
-
             <Communication />
             <Footer />
-
+            < SocialMediaIcons />
             <SupportButton />
         </ThemeProvider>
     );

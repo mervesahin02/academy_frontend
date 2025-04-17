@@ -1,6 +1,6 @@
 /* Kart yapısı */
 .newedu-news-card {
-    width: 233px;
+    width: 245px;
     border-radius: 16px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     overflow: hidden;
@@ -10,11 +10,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-}
-
-/* Hover büyütme */
-.newedu-news-card:hover {
-    transform: translateY(-5px);
 }
 
 /* Sadece özet olan kartlara uygula */
@@ -187,4 +182,10 @@
     display: flex;
     align-items: center;
     gap: 6px;
+}
+
+.newedu-certificate-image {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
 }

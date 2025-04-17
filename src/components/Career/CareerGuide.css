@@ -1,10 +1,9 @@
 .career-section {
-    background: #329cb2;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
 .career-container {
-    max-width: 1000px;
+    max-width: 1310px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -14,14 +13,25 @@
 
 .career-left {
     flex: 1;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
-.career-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+.career-gif-group {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.career-gif {
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .career-right {
@@ -31,28 +41,29 @@
 .career-title {
     font-size: 22px;
     font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 16px;
+    color: #333;
+    margin-bottom: 18px;
 }
 
 .career-text {
     font-size: 15px;
-    color: #ffffff;
+    color: #555;
     line-height: 1.6;
+    margin-bottom: 30px;
 }
 
 .career-start-btn {
-    padding: 10px 28px;
-    background-color: #21bbe2;
-    color: rgb(234, 233, 233);
+    padding: 12px 32px;
+    background-color: #dddddd60;
+    color: #45ccd6;
     border: none;
-    border-radius: 30px;
-    font-size: 15px;
-    font-weight: bold;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .career-start-btn:hover {
-    background-color: #2d879b;
+    background-color: #4b464661;
 }
