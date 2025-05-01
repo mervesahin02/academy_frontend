@@ -1,0 +1,133 @@
+/* Genel container */
+.about-page-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+    color: #818181;
+    background-color: #f4f4f4e6;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Başlık */
+.page-title {
+    font-size: 2.7rem;
+    font-weight: 600;
+    text-align: center;
+    color: #559dab;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #b8b8b891;
+    padding-bottom: 15px;
+}
+
+/* Kart yapıları */
+.about-section,
+.why-section,
+.vision-mission,
+.leadership-section {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(131, 131, 131, 0.04);
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.about-section:hover,
+.why-section:hover,
+.vision-mission:hover,
+.leadership-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(133, 38, 38, 0.08);
+}
+
+/* Yazı alanları */
+.about-section p,
+.why-section ul,
+.vision-mission p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.why-section h3,
+.vision-mission h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #548ca0;
+    font-weight: 600;
+}
+
+.why-section ul {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+/* Yönetici kartları */
+.leadership-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.leader-card {
+    display: flex;
+    flex-direction: row;
+    background: #ffffff70;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(83, 83, 83, 0.05);
+    overflow: hidden;
+}
+
+.leader-image {
+    width: 35%;
+    object-fit: cover;
+    max-height: 350px;
+    border-right: 1px solid #e5e7eb;
+}
+
+.leader-content {
+    padding: 30px;
+    width: 65%;
+}
+
+.leader-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #444444;
+}
+
+.leader-content h4 {
+    font-size: 1.1rem;
+    color: #7c7c7c;
+    margin-bottom: 20px;
+}
+
+.leader-content p {
+    font-size: 1rem;
+    color: #334155;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+@media (max-width: 1199px) {
+    .about-page-container {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .leader-card {
+        flex-direction: column;
+    }
+
+    .leader-image {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .leader-content {
+        width: 100%;
+    }
+}

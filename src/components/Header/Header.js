@@ -3,6 +3,8 @@ import { ThemeContext } from "../../context/ThemeContext";
 import "./Header.css";
 import { FaSearch, FaTimes, FaChevronRight } from "react-icons/fa";
 import { FiTrendingUp } from "react-icons/fi";
+import { Link } from "react-router-dom";
+
 
 // Ana kategoriler
 const categories = [
@@ -77,11 +79,13 @@ const Header = () => {
                 <div className="header-top">
                     {/* Sol Kısım */}
                     <div className="left-section">
-                        <img
-                            src="https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/bb2b1a79-8a7f-4c18-970c-6687a910b496/BTKAkademi-Normal.png?t=1739345573413"
-                            alt="BTK Akademi"
-                            className="btk-logo"
-                        />
+                        <Link to="/">
+                            <img
+                                src="https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/bb2b1a79-8a7f-4c18-970c-6687a910b496/BTKAkademi-Normal.png?t=1739345573413"
+                                alt="BTK Akademi"
+                                className="btk-logo"
+                            />
+                        </Link>
 
                         <div
                             className="dropdown"

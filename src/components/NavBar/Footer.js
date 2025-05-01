@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // BURAYI UNUTMA!
 import "./Footer.css";
 import { FaYoutube, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -11,28 +12,28 @@ const Footer = () => {
                     <div className="footer-section">
                         <h4>Kurumsal</h4>
                         <ul>
-                            <li><a href="#">Hakkımızda</a></li>
-                            <li><a href="#">İş Birliklerimiz</a></li>
-                            <li><a href="#">Gizlilik Politikası ve Aydınlatma Metni</a></li>
-                            <li><a href="#">Çerez Politikası</a></li>
+                            <li><Link to="/hakkimizda">Hakkımızda</Link></li>
+                            <li><Link to="/is-birliklerimiz">İş Birliklerimiz</Link></li>
+                            <li><Link to="/gizlilik-politikasi">Gizlilik Politikası ve Aydınlatma Metni</Link></li>
+                            <li><Link to="/cerez-politikasi">Çerez Politikası</Link></li>
                         </ul>
                     </div>
 
                     <div className="footer-section">
                         <h4>BTK Akademi</h4>
                         <ul>
-                            <li><a href="#">Kariyer Rehberi</a></li>
-                            <li><a href="#">Etkinlikler</a></li>
-                            <li><a href="#">Faydalı Linkler</a></li>
-                            <li><a href="#">Sıkça Sorulan Sorular</a></li>
-                            <li><a href="#">Gönüllülük</a></li>
+                            <li><Link to="/kariyer-rehberi">Kariyer Rehberi</Link></li>
+                            <li><Link to="/etkinlikler">Etkinlikler</Link></li>
+                            <li><Link to="/faydali-linkler">Faydalı Linkler</Link></li>
+                            <li><Link to="/sss">Sıkça Sorulan Sorular</Link></li>
+                            <li><Link to="/gonulluluk">Gönüllülük</Link></li>
                         </ul>
                     </div>
 
                     <div className="footer-section">
                         <h4>İletişim</h4>
                         <ul>
-                            <li><a href="#">Adres Bilgisi</a></li>
+                            <li><Link to="/iletisim">İletişim Bilgileri</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -47,10 +48,8 @@ const Footer = () => {
                         <a href="#"><img src="https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/78e5e9d0-8ff6-4cc2-ac6f-64bfda53156b/Appstore%404x.png?t=1739346154118" alt="App Store" /></a>
                         <a href="#"><img src="https://assets-btkakademi-gov-tr.akamaized.net/api/gallery/51/23cd79b1-63fc-48c3-a2e7-0f01a0e4761c/playstore%404x.png?t=1739346154119" alt="Play Store" /></a>
                     </div>
-
                 </div>
             </div>
-
         </footer>
     );
 };

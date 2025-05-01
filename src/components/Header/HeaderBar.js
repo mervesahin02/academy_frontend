@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";  // ✅ Bunu ekledik!
 import "./HeaderBar.css";
 
 const HeaderBar = () => {
     return (
         <div className="header-bottom">
             <nav className="header-menu">
-                <a href="#">Hakkımızda</a>
-                <a href="#">Kariyer Rehberi</a>
-                <a href="#">Haberler</a>
-                <a href="#">Etkinlikler</a>
-                <a href="#">Sıkça Sorulan Sorular</a>
-                <a href="#">Gönüllülük</a>
+                <Link to="/hakkimizda">Hakkımızda</Link>
+                <Link to="/kariyer">Kariyer Rehberi</Link>
+                <Link to="/haberler">Haberler</Link>
+                <Link to="/etkinlikler">Etkinlikler</Link>
+                <Link to="/sss">Sıkça Sorulan Sorular</Link>
+                <Link to="/gonulluluk">Gönüllülük</Link>
             </nav>
         </div>
     );

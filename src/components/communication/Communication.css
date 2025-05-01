@@ -34,11 +34,11 @@
 }
 
 .card {
-    background-color: #fff;
-    border: 1px solid #f0f0f0;
+    background-color: #f0f0f05d;
+    border: 1px solid #d8d8d897;
     border-radius: 30px;
     width: 300px;
-    height: 200px;
+    height: 250px;
     padding: 40px 20px;
     box-shadow: 0 0 0 1px #eee;
     display: flex;
@@ -63,7 +63,7 @@
 .card hr {
     width: 80%;
     border: none;
-    border-top: 1px solid #f0f0f0;
+    border-top: 1px solid #64646461;
 }
 
 .description {

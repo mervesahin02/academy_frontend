@@ -1,0 +1,75 @@
+/* Genel container */
+.cookiePolicy-page-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+    color: #818181;
+    background-color: #f4f4f4e6;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Başlık */
+.page-title {
+    font-size: 2.7rem;
+    font-weight: 600;
+    text-align: center;
+    color: #559dab;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #b8b8b891;
+    padding-bottom: 15px;
+}
+
+.cookie-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+.cookie-card h5 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #559dab;
+}
+
+.cookie-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.cookie-card ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.cookie-card ul li {
+    margin-bottom: 8px;
+}
+
+.cookie-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cookie-table th,
+.cookie-table td {
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.cookie-table th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+.cookie-table a {
+    color: #459fc2;
+    text-decoration: underline;
+}

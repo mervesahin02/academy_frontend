@@ -1,0 +1,216 @@
+.volunteer-page {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+    color: #818181;
+    background-color: #f4f4f4e6;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.main-title {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #414141;
+    margin-bottom: 20px;
+}
+
+.amain-title {
+    font-size: 20px;
+    font-weight: 400;
+
+    color: #414141;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 16px;
+    color: #475467;
+    line-height: 1.6;
+    max-width: 1300px;
+    margin: 0 auto 50px;
+}
+
+.volunteer-button {
+    font-size: 17px;
+    font-weight: 600;
+    padding: 16px 24px;
+    margin: 12px 0;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.volunteer-button:hover {
+    transform: scale(1.02);
+}
+
+.volunteer-button.online {
+    background-color: #f04438;
+}
+
+.volunteer-button.face {
+    background-color: #12b76a;
+}
+
+.volunteer-button.campus {
+    background-color: #261c58;
+}
+
+/* Sol çizgili kart görünüm */
+.info-box {
+    display: flex;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    margin-top: 30px;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease;
+}
+
+.info-box::before {
+    content: '';
+    display: block;
+    width: 8px;
+    background-color: var(--line-color, #ccc);
+}
+
+.info-box-content {
+    padding: 30px;
+    flex: 1;
+}
+
+.info-box.online::before {
+    --line-color: #f04438;
+}
+
+.info-box.face::before {
+    --line-color: #12b76a;
+}
+
+.info-box.campus::before {
+    --line-color: #261c58;
+}
+
+.info-box h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #1d2939;
+}
+
+.info-box p {
+    font-size: 16px;
+    color: #475467;
+    margin-bottom: 14px;
+}
+
+.info-box ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.info-box li {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #344054;
+    line-height: 1.6;
+}
+
+/* Süreç */
+.volunteer-process {
+    margin-top: 50px;
+    background: #ffffff;
+    border-left: 6px solid #c3c3c4;
+    border-radius: 10px;
+    padding: 30px;
+    font-weight: 400;
+}
+
+.volunteer-process h2 {
+    font-weight: 400;
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.volunteer-process h3 {
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #1e293b;
+}
+
+.volunteer-process p {
+
+    font-size: 15px;
+    color: #475467;
+    margin-bottom: 10px;
+}
+
+/* Kapanış mesajı */
+.volunteer-call {
+    margin-top: 60px;
+    padding: 40px;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    border-left: 6px solid #bababa;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    text-align: left;
+    font-weight: 400;
+
+}
+
+.volunteer-call h3 {
+    font-size: 20px;
+    color: #191919;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.volunteer-call p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #2e2e2e;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Animasyon */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 26px;
+    }
+
+    .intro-text {
+        font-size: 16px;
+    }
+
+    .volunteer-button {
+        font-size: 16px;
+    }
+
+    .info-box h2 {
+        font-size: 20px;
+    }
+
+    .info-box li {
+        font-size: 14px;
+    }
+}

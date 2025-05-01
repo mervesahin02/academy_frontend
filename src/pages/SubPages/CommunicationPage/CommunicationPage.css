@@ -1,0 +1,42 @@
+.communication-page-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+    color: #818181;
+    background-color: #f4f4f4e6;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Başlık */
+.page-title {
+    font-size: 2.7rem;
+    font-weight: 600;
+    text-align: center;
+    color: #559dab;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #b8b8b891;
+    padding-bottom: 15px;
+}
+
+.contact-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+    color: #1a1a1a;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.contact-card a {
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+.map-wrapper {
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
