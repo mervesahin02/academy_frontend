@@ -1,0 +1,227 @@
+.titlepage-container {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 50px;
+    gap: 40px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.titlepage-sidebar {
+    width: 260px;
+    background-color: #f4f4f4;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.titlepage-sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.titlepage-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.titlepage-category-header {
+    font-weight: 600;
+    font-size: 15px;
+    color: #2c3e50;
+    cursor: pointer;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.titlepage-checkbox-list {
+    margin: 0;
+    padding-left: 14px;
+}
+
+.titlepage-checkbox-list li {
+    list-style: none;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.titlepage-main {
+    flex: 1;
+}
+
+.titlepage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.titlepage-title {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.titlepage-count {
+    font-size: 14px;
+    color: #777;
+    margin-top: 4px;
+}
+
+.titlepage-tools {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.titlepage-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.titlepage-search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    width: 160px;
+}
+
+.titlepage-sort {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #f2f2f2;
+    font-size: 14px;
+}
+
+.titlepage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    gap: -10px;
+}
+
+.titlepage-card {
+    width: 245px;
+    border-radius: 16px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.titlepage-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.titlepage-card-img img {
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    transition: filter 0.4s ease-in-out;
+}
+
+.titlepage-card-body {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.titlepage-card-level {
+    margin-top: -10px;
+    /* Eskiden 1px'ti */
+    margin-left: 0;
+    width: fit-content;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 0;
+    color: #fff;
+    background-color: #e67128;
+    position: relative;
+    z-index: 1;
+}
+
+.titlepage-card-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 13px;
+    color: #333;
+}
+
+.titlepage-card-reviews {
+    color: #888;
+    margin-left: 2px;
+    font-size: 13px;
+}
+
+.titlepage-card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 2px;
+}
+
+.titlepage-card-instructor {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+.titlepage-card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #212121;
+    margin-top: 10px;
+    font-weight: 600;
+    background-color: #f1f1f1;
+    /* Gri arka plan için override'ı kaldırıyoruz */
+    background: #bcbcbc23;
+    /* Yeni koyu tema */
+    padding: 10px 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.titlepage-category-header {
+    font-weight: 600;
+    font-size: 15px;
+    color: #2c3e50;
+    cursor: pointer;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.titlepage-checkbox-list {
+    margin: 0;
+    padding-left: 14px;
+}
+
+.titlepage-checkbox-list li {
+    list-style: none;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #555;
+}

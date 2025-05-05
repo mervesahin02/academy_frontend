@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import NewEducationCard from './NewEducationCard';
 import './NewEducation.css';
+import { Link } from 'react-router-dom';
 
 const educationData = [
     {
@@ -120,7 +121,11 @@ const NewEducation = () => {
     return (
         <div className="newedu-news-section">
             <div className="newedu-news-header">
-                <h2 className="newedu-news-section-title">Yeni Eğitimler</h2>
+                <h2 className="newedu-news-section-title">
+                    <Link to="/egitimler" style={{ textDecoration: 'none', color: '#333' }}>
+                        Yeni Eğitimler
+                    </Link>
+                </h2>
                 <div className="newedu-news-pagination-buttons">
                     <button onClick={scrollLeft}><FaChevronLeft /></button>
                     <button onClick={scrollRight}><FaChevronRight /></button>

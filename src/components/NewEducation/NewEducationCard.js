@@ -2,6 +2,7 @@ import React from 'react';
 import './NewEducationCard.css';
 import { FaRegUser, FaClock } from 'react-icons/fa';
 import { AiFillStar } from 'react-icons/ai';
+import { Link } from 'react-router-dom'
 
 const summaries = {
     "Doğal Dil İşleme": "Yapay zeka ile metinleri analiz etmeyi öğrenin.",
@@ -24,31 +25,33 @@ const NewEducationCard = ({ image, title, instructor, level, levelClass, student
     };
 
     return (
-        <div className="newedu-news-card">
-            <div className="newedu-image-box">
-                <img src={image} alt={title} className="newedu-news-card-image" />
-            </div>
-            <div className={`newedu-level-badge ${levelClass}`}>{level}</div>
-            <div className="newedu-news-card-content">
-                <div className="newedu-rating">
-                    <div className="newedu-star-list">{renderStars()}</div>
-                    <span>{rating.toFixed(1)}</span>
-                    <span className="newedu-reviews">({reviews} Yorum)</span>
+        <Link to={`/egitim/${encodeURIComponent(title)}`} style={{ textDecoration: 'none' }}>
+            <div className="newedu-news-card">
+                <div className="newedu-image-box">
+                    <img src={image} alt={title} className="newedu-news-card-image" />
                 </div>
-                <h3 className="newedu-news-card-title">{title}</h3>
-                <p className="newedu-instructor">{instructor}</p>
-            </div>
-            <div className="newedu-info-box">
-                <div className="newedu-info-item"><FaRegUser /> {students}</div>
-                <div className="newedu-info-item"><FaClock /> {duration}</div>
-            </div>
-            <div className="newedu-summary-overlay">
-                <div className="newedu-summary-content">
-                    <img src="/images/sertifika.png" alt="Sertifika" className="newedu-certificate-image" />
-                    <p className="newedu-summary-text">{summaries[title]}</p>
+                <div className={`newedu-level-badge ${levelClass}`}>{level}</div>
+                <div className="newedu-news-card-content">
+                    <div className="newedu-rating">
+                        <div className="newedu-star-list">{renderStars()}</div>
+                        <span>{rating.toFixed(1)}</span>
+                        <span className="newedu-reviews">({reviews} Yorum)</span>
+                    </div>
+                    <h3 className="newedu-news-card-title">{title}</h3>
+                    <p className="newedu-instructor">{instructor}</p>
+                </div>
+                <div className="newedu-info-box">
+                    <div className="newedu-info-item"><FaRegUser /> {students}</div>
+                    <div className="newedu-info-item"><FaClock /> {duration}</div>
+                </div>
+                <div className="newedu-summary-overlay">
+                    <div className="newedu-summary-content">
+                        <img src="/images/sertifika.png" alt="Sertifika" className="newedu-certificate-image" />
+                        <p className="newedu-summary-text">{summaries[title]}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

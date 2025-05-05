@@ -37,6 +37,9 @@ import UsefulLinksPage from "./pages/SubPages/UsefulLinksPage/UsefulLinksPage";
 import SecurityPage from "./pages/SubPages/SecurityPage/SecurityPage";
 import CookiePolicyPage from "./pages/SubPages/CookiePolicyPage/CookiePolicyPage";
 import CommunicationPage from "./pages/SubPages/CommunicationPage/CommunicationPage";
+import TitlePage from "./pages/SubPages/TitlePage/TitlePage";
+import EducationPage from "./pages/SubPages/EducationPage/EducationPage";
+
 // 🔁 Alt bileşen: sayfa içeriğini koşullu render eder
 function AppContent() {
     const location = useLocation();
@@ -59,6 +62,9 @@ function AppContent() {
                 <Route path="/gizlilik-politikasi" element={<SecurityPage />} />
                 <Route path="/cerez-politikasi" element={< CookiePolicyPage />} />
                 <Route path="/iletisim" element={< CommunicationPage />} />
+                <Route path="/egitimler" element={< TitlePage />} />
+                <Route path="/egitim/:title" element={<EducationPage />} />
+
             </Routes>
 
             {/* Sadece anasayfa için bu içerikler */}
