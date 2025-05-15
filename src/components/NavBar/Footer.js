@@ -33,7 +33,7 @@ const Footer = () => {
                     <div className="footer-section">
                         <h4>İletişim</h4>
                         <ul>
-                            <li><Link to="/iletisim">İletişim Bilgileri</Link></li>
+                            <li><Link to="/i̇letişim">İletişim Bilgileri</Link></li>
                         </ul>
                     </div>
                 </div>

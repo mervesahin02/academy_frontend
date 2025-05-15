@@ -44,6 +44,11 @@ import EducationPage from "./pages/SubPages/EducationPage/EducationPage";
 import UserLogin from "./pages/LoginPages/UserLogin/UserLogin";
 import Entrance from "./pages/LoginPages/Entrance/Entrance";
 
+import Certificate from "./pages/LoginPages/Certificate/Certificate";
+import Statistics from "./pages/LoginPages/Statistics/Statistics";
+import Notes from "./pages/LoginPages/Notes/Notes";
+
+
 
 // 🔁 Alt bileşen: sayfa içeriğini koşullu render eder
 function AppContent() {
@@ -66,12 +71,15 @@ function AppContent() {
                 <Route path="/faydali-linkler" element={<UsefulLinksPage />} />
                 <Route path="/gizlilik-politikasi" element={<SecurityPage />} />
                 <Route path="/cerez-politikasi" element={< CookiePolicyPage />} />
-                <Route path="/iletisim" element={< CommunicationPage />} />
-                <Route path="/egitimler" element={< TitlePage />} />
+                <Route path="/i̇letişim" element={< CommunicationPage />} />
+                <Route path="/eĞitimler" element={< TitlePage />} />
                 <Route path="/egitim/:title" element={<EducationPage />} />
                 <Route path="/login" element={<UserLogin />} />
                 <Route path="/diger-giris-secenekleri" element={<Entrance />} />
 
+                <Route path="/sertifikalarım" element={<Certificate />} />
+                <Route path="/i̇statistiklerim" element={<Statistics />} />
+                <Route path="/notlarım" element={<Notes />} />
             </Routes>
 
             {/* Sadece anasayfa için bu içerikler */}

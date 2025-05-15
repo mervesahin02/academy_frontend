@@ -1,0 +1,177 @@
+.statistics-container {
+    max-width: 1300px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Üst başlık ve Profile Dön butonu */
+.statistics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.statistics-header h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Profile Dön Butonu */
+.cback-button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.cback-button:hover {
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    transform: translateY(-1px);
+}
+
+/* Filtre Alanı */
+.statistics-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-input,
+.status-filter,
+.page-size-filter {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+}
+
+/* Tablo */
+.statistics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.statistics-table th {
+    background: #f4f6f8;
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+}
+
+.statistics-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: relative;
+    background: #f1f3f5;
+    border-radius: 14px;
+    height: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.progress-bar.completed {
+    background: #e0f4ee;
+}
+
+.progress-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #81d3e03a, #2e99ac);
+    border-radius: 14px;
+    transition: width 0.5s ease;
+    z-index: 0;
+}
+
+.progress-bar span {
+    position: relative;
+    z-index: 1;
+    font-size: 12px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Footer: İndir Butonu ve Pagination */
+.statistics-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* İndir Butonu */
+.download-excel {
+    background: linear-gradient(90deg, #007bff, #00bfff);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.download-excel:hover {
+    background: linear-gradient(90deg, #0066cc, #00a6d6);
+    transform: translateY(-1px);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination button {
+    background: white;
+    border: 1px solid #d1d5db;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pagination button:hover {
+    background: #f3f4f6;
+    border-color: #b2bec3;
+}
+
+.pagination button.active {
+    background: linear-gradient(90deg, #2e99ac, #2e99ac);
+    color: white;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}

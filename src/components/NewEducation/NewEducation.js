@@ -122,7 +122,7 @@ const NewEducation = () => {
         <div className="newedu-news-section">
             <div className="newedu-news-header">
                 <h2 className="newedu-news-section-title">
-                    <Link to="/egitimler" style={{ textDecoration: 'none', color: '#333' }}>
+                    <Link to="/eğitimler" style={{ textDecoration: 'none', color: '#333' }}>
                         Yeni Eğitimler
                     </Link>
                 </h2>

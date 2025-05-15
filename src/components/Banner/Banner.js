@@ -69,8 +69,8 @@ function Banner() {
                 />
             </div>
 
-            <div key={progressKey} className="progress-wrapper">
-                <div className="progress-bar"></div>
+            <div key={progressKey} className="bprogress-wrapper">
+                <div className="bprogress-bar"></div>
             </div>
         </div>
     );
