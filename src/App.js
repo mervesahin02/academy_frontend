@@ -40,6 +40,11 @@ import CommunicationPage from "./pages/SubPages/CommunicationPage/CommunicationP
 import TitlePage from "./pages/SubPages/TitlePage/TitlePage";
 import EducationPage from "./pages/SubPages/EducationPage/EducationPage";
 
+
+import UserLogin from "./pages/LoginPages/UserLogin/UserLogin";
+import Entrance from "./pages/LoginPages/Entrance/Entrance";
+
+
 // 🔁 Alt bileşen: sayfa içeriğini koşullu render eder
 function AppContent() {
     const location = useLocation();
@@ -64,6 +69,8 @@ function AppContent() {
                 <Route path="/iletisim" element={< CommunicationPage />} />
                 <Route path="/egitimler" element={< TitlePage />} />
                 <Route path="/egitim/:title" element={<EducationPage />} />
+                <Route path="/login" element={<UserLogin />} />
+                <Route path="/diger-giris-secenekleri" element={<Entrance />} />
 
             </Routes>
 

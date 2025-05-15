@@ -4,6 +4,7 @@ import "./Header.css";
 import { FaSearch, FaTimes, FaChevronRight } from "react-icons/fa";
 import { FiTrendingUp } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 // Ana kategoriler
@@ -45,6 +46,7 @@ const Header = () => {
 
     const [searchOpen, setSearchOpen] = useState(false);
     const [searchText, setSearchText] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -155,7 +157,10 @@ const Header = () => {
                             </button>
                         </div>
 
-                        <button className="login-button">Giriş Yap</button>
+                        <button className="login-button" onClick={() => navigate("/login")}>
+                            Giriş Yap
+                        </button>
+
                     </div>
                 </div>
 
